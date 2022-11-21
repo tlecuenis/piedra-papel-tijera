@@ -1,0 +1,80 @@
+html{
+    font-size: 62.5%;
+}
+body{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    background-color: blanchedalmond;
+}
+
+.container{
+    width: 100vw;
+    background-color: black;
+    margin-top: 5rem;
+}
+.title{
+    text-align: center;
+    font-size: 5rem;
+    color: white;
+    padding: 1rem;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 60rem));
+    place-content: center;
+}
+.nombre{
+    font-size: 5rem;
+    text-align: center;
+}
+.muestra{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 30rem;
+    height: 30rem;
+    margin: 0 auto;
+    background-color: white;
+    border: 0.5rem solid black;
+    border-radius: 2rem;
+
+}
+.pvsp{
+    display: grid;
+    place-content: center;
+}
+.pvsp p{
+    text-align: center;
+    font-size: 8rem;
+    margin: 1rem;
+}
+
+.player__seleccion, .contador, .pc__seleccion{
+    display: grid;
+    grid-template-columns: repeat(3, 8rem);
+    gap: 3rem;
+    place-content: center;
+    height: 10rem;
+    font-size: 5rem;
+    max-width: 40rem;
+    background-color: white;
+    margin: 3rem auto;
+    border-radius: 2rem;
+}
+.player__seleccion p, .contador p, .pc__seleccion p{
+    margin: 0;
+    place-self: center;
+}
+
+.player__seleccion p:hover{
+    opacity: 0.5;
+    cursor: pointer;
+    border: 0.1rem solid black;
+}
+
+.mostrando{
+    font-size: 10rem;
+    margin: 0;
+}
