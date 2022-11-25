@@ -63,12 +63,26 @@ body{
     margin: 3rem auto;
     border-radius: 2rem;
 }
-.player__seleccion p, .contador p, .pc__seleccion p{
+.player__seleccion button{
+    font-size: 5rem;
+    border: none;
+    background-color: transparent;
+}
+.player__seleccion button:hover{
+    border-radius: 1rem;
+}
+#block:hover{ 
+    cursor: not-allowed;
+    outline: none;
+    border: 0px;
+}
+.contador p, .pc__seleccion p{
     margin: 0;
     place-self: center;
+    
 }
 
-.player__seleccion p:hover{
+.player__seleccion button:hover{
     opacity: 0.5;
     cursor: pointer;
     border: 0.1rem solid black;
