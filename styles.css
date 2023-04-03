@@ -1,5 +1,6 @@
 html{
     font-size: 62.5%;
+    font-family: Arial, Helvetica, sans-serif;
 }
 body{
     box-sizing: border-box;
@@ -19,15 +20,24 @@ body{
     color: white;
     padding: 1rem;
 }
+.contador-title{
+    text-align: center;
+    font-size: 5rem;
+    margin-bottom: 0;
+}
+
 
 .grid-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(10rem, 60rem));
+    /* grid-template-columns: repeat(auto-fit, min(fit-content, 60rem)); */
     place-content: center;
+    
 }
 .nombre{
     font-size: 5rem;
     text-align: center;
+    margin-top: 0;
 }
 .muestra{
     display: flex;
@@ -50,6 +60,16 @@ body{
     font-size: 8rem;
     margin: 1rem;
 }
+.ganador{
+    font-size: 5rem;
+    color: green;
+    text-align: center;
+}
+.perdedor{
+    font-size: 5rem;
+    color: red;
+    text-align: center;
+}
 
 .player__seleccion, .contador, .pc__seleccion{
     display: grid;
@@ -63,13 +83,19 @@ body{
     margin: 3rem auto;
     border-radius: 2rem;
 }
+.border{
+    transition: 0.1s;
+    border: 5px solid black;
+    border-radius: 10px;
+}
 .player__seleccion button{
     font-size: 5rem;
     border: none;
     background-color: transparent;
 }
-.player__seleccion button:hover{
+.player__seleccion > .player-button:hover{
     border-radius: 1rem;
+    border: none;
 }
 #block:hover{ 
     cursor: not-allowed;
