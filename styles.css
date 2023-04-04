@@ -12,18 +12,19 @@ body{
 .container{
     width: 100vw;
     background-color: black;
-    margin-top: 5rem;
+    margin-top: 2rem;
 }
 .title{
     text-align: center;
     font-size: 5rem;
     color: white;
     padding: 1rem;
+    margin: 0;
 }
 .contador-title{
     text-align: center;
     font-size: 5rem;
-    margin-bottom: 0;
+    margin: 1rem auto;
 }
 
 
@@ -37,7 +38,7 @@ body{
 .nombre{
     font-size: 5rem;
     text-align: center;
-    margin-top: 0;
+    margin: 0 auto;
 }
 .muestra{
     display: flex;
@@ -45,7 +46,7 @@ body{
     justify-content: center;
     max-width: 30rem;
     height: 30rem;
-    margin: 0 auto;
+    margin: 1rem auto;
     background-color: white;
     border: 0.5rem solid black;
     border-radius: 2rem;
@@ -57,7 +58,7 @@ body{
 }
 .pvsp p{
     text-align: center;
-    font-size: 8rem;
+    font-size: 6rem;
     margin: 1rem;
 }
 .ganador{
@@ -71,7 +72,7 @@ body{
     text-align: center;
 }
 
-.player__seleccion, .contador, .pc__seleccion{
+.player__seleccion, .pc__seleccion{
     display: grid;
     grid-template-columns: repeat(3, 8rem);
     gap: 3rem;
@@ -83,6 +84,20 @@ body{
     margin: 3rem auto;
     border-radius: 2rem;
 }
+
+.contador{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 40rem;
+    min-height: 8rem;
+    height: fit-content;
+    border-radius: 20px;
+    font-size: 5rem;
+    background-color: white;
+}
+
 .border{
     transition: 0.1s;
     border: 5px solid black;
@@ -117,4 +132,22 @@ body{
 .mostrando{
     font-size: 10rem;
     margin: 0;
+}
+.reiniciar{
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.boton-reiniciar{
+    width: 25rem;
+    height: 5rem;
+    margin: 0 auto;
+    font-size: 2.5rem;
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+
+}
+.boton-reiniciar:hover{
+    cursor: pointer;
 }

@@ -15,7 +15,7 @@ const pcTijera = document.querySelector(".pc__tijera");
 
 let contador = document.querySelector(".contador");
 
-let n = 0;
+var n = 0;
 let ganaRonda = 0;
 let pierdeRonda = 0;
 var seleccionPc
@@ -132,6 +132,7 @@ function combate(player, seleccionPc){
 }
 
 function chequeo(n, ganaRonda, pierdeRonda){
+    console.log(n)
     if (n >= 3){
         playerPiedra.disabled = true;
         playerPiedra.setAttribute("id", "block"); 
@@ -140,66 +141,51 @@ function chequeo(n, ganaRonda, pierdeRonda){
         playerTijera.disabled = true;
         playerTijera.setAttribute("id", "block"); 
         if(ganaRonda > pierdeRonda){
-            let ganador = document.querySelector(".ganador");
+            let contador = document.querySelector(".contador");
             let final = document.createElement('p');
             final.innerHTML = "GANASTE";
-            ganador.append(final);
+            final.classList.add("ganador")
+            contador.append(final);
         } else{
-            let perdedor = document.querySelector(".perdedor");
+            let contador = document.querySelector(".contador");
             let final = document.createElement('p');
             final.innerHTML = "PERDISTE";
-            perdedor.append(final);
+            final.classList.add("perdedor")
+            contador.append(final);
         }
 
-        // let reiniciar = document.querySelector(".reiniciar");
-        // let botonReiniciar = document.createElement('button');
-        // botonReiniciar.innerHTML = "Reiniciar partida";
-        // reiniciar.append(botonReiniciar);
-        // botonReiniciar.addEventListener('click', reinicio);
+        let reiniciar = document.querySelector(".reiniciar");
+        let botonReiniciar = document.createElement('button');
+        botonReiniciar.innerHTML = "Reiniciar partida";
+        botonReiniciar.classList.add("boton-reiniciar")
+        reiniciar.append(botonReiniciar);
+        botonReiniciar.addEventListener('click', reinicio);
+
+        
         
     }
 
 }
 
-// function reinicio(){
+function reinicio(){
     
 
-//     playerPiedra.disabled = false;
-//     playerPiedra.removeAttribute("id", "block"); 
-//     playerPapel.disabled = false;
-//     playerPapel.removeAttribute("id", "block"); 
-//     playerTijera.disabled = false;
-//     playerTijera.removeAttribute("id", "block");
+    playerPiedra.disabled = false;
+    playerPiedra.removeAttribute("id", "block"); 
+    playerPapel.disabled = false;
+    playerPapel.removeAttribute("id", "block"); 
+    playerTijera.disabled = false;
+    playerTijera.removeAttribute("id", "block");
 
-//     contador.removeChild(final)
-//     contador.removeChild(gana)
-//     contador.removeChild(pierde)
-//     contador.removeChild(gana)
-//     contador.removeChild(pierde)
-//     contador.removeChild(gana)
-//     contador.removeChild(pierde)
+    //borra todos los hijos de contador
+    contador.replaceChildren()
+    
+    let botonReiniciar = document.querySelector(".boton-reiniciar");
+    botonReiniciar.remove()
 
-// }
+    n=0
+}
 
-// function animacion(){
-//     let numero
-//     pcPiedra.classList.add("border")
-//     setTimeout(() =>{ 
-//         pcPiedra.classList.remove("border")
-//         pcPapel.classList.add("border")
-//         setTimeout(() =>{
-//             pcPapel.classList.remove("border")
-//             pcTijera.classList.add("border")
-//             setTimeout(() =>{
-//                 pcTijera.classList.remove("border")
-//                 numero = aleatorio(0,2)
-//                 return numero
-//             }, 1000)
-//         }, 1000)
-//     }, 1000)
-
-//     return numero
-// }
 
 
 
