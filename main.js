@@ -16,8 +16,8 @@ const pcTijera = document.querySelector(".pc__tijera");
 let contador = document.querySelector(".contador");
 
 var n = 0;
-let ganaRonda = 0;
-let pierdeRonda = 0;
+var ganaRonda = 0;
+var pierdeRonda = 0;
 var seleccionPc
 
 
@@ -183,7 +183,9 @@ function reinicio(){
     let botonReiniciar = document.querySelector(".boton-reiniciar");
     botonReiniciar.remove()
 
-    n=0
+    n = 0
+    ganaRonda = 0
+    pierdeRonda = 0
 }
 
 
